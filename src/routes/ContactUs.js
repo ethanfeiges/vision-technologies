@@ -14,7 +14,7 @@ const ContactUs = () => {
   const showPopup = () => {
     setPopupVisible(true);
     setTimeout(() => {
-    setPopupVisible(false);
+      setPopupVisible(false);
     }, 3000);
   };
 
@@ -35,16 +35,31 @@ const ContactUs = () => {
       );
   };
 
+  const formatPhoneNumber = (value) => {
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 7) {
+      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3)}`;
+    }
+    return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+  };
+
+  const handlePhoneChange = (e) => {
+    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+    e.target.value = formattedPhoneNumber;
+  };
+
   return (
     <div className="page-container">
       <h1 className="page-title">Contact Us</h1>
-      <form ref={form} onSubmit={sendEmail} className="form-container">
+      <form ref={form} onSubmit={handleSubmit} className="form-container">
         <label>Name</label>
         <input type="text" name="user_name" />
         <label>Email</label>
         <input type="email" name="user_email" />
         <label>Phone</label>
-        <input type="phone" name="user_phone" />
+        <input type="text" name="user_phone" onChange={handlePhoneChange} maxLength="12" />
         <label>Message</label>
         <textarea name="message" />
         <input type="submit" value="Send" />
