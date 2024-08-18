@@ -9,11 +9,6 @@
     padding: 1rem 2rem;
     position: relative;
     transform: rotateX(1deg);
-    width: 100%;
-    box-sizing: border-box;
-    /* Ensure padding and border are included in the width */
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
 }
 
 .header:hover {
@@ -27,11 +22,6 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 100%;
-    /* Ensure container doesn't exceed viewport width */
-    box-sizing: border-box;
-    /* Ensure padding and border are included in the width */
 }
 
 .logo {
@@ -75,8 +65,6 @@
     font-size: clamp(0.9rem, 1.5vw, 1.8rem);
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    flex-wrap: wrap;
-    /* Wrap navigation links on smaller screens */
 }
 
 .navLink {
@@ -113,8 +101,6 @@
     text-align: left;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
     border-radius: 8px;
-    overflow: auto;
-    /* Allow scrolling within dropdown if necessary */
 }
 
 .navLinkProducts:hover .dropdownContent,
@@ -182,24 +168,18 @@ a {
 
     .dropdownContent {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        width: 100%;
+        width: 100vw;
         max-height: 70vh;
         padding: 10px;
-        overflow: auto;
-        /* Allow scrolling if needed */
+        overflow: hidden;
     }
 
     .nav {
         font-size: 1.4rem;
-        flex-direction: column;
-        /* Stack nav links vertically on small screens */
-        width: 100%;
-        /* Ensure nav occupies full width */
     }
 
     .logo {
-        transform: none;
-        /* Remove translate on smaller screens */
+        transform: translateX(1rem);
     }
 
     .logoImage {
@@ -218,8 +198,6 @@ a {
 
     .nav {
         font-size: 1.4rem;
-        flex-direction: column;
-        /* Ensure vertical stacking */
     }
 
     .logoImage {
