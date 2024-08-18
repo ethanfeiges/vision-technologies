@@ -8,53 +8,59 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px 20px;
-    /* Increased padding for a more spacious look */
+    padding: 20px 10px;
+    /* Reduced padding for better fit on mobile */
     box-sizing: border-box;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    /* Slightly larger shadow for depth */
-    border-top: 5px solid #f5c508;
-    /* Added a top border for visual separation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Reduced shadow size */
+    border-top: 4px solid #f5c508;
+    /* Reduced top border size */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* Changed to space-between for better fit */
     align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 100%;
+    /* Ensured it fits within viewport */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
+    /* Reduced padding for mobile */
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    /* Slightly larger border radius */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Enhanced box shadow */
-    backdrop-filter: blur(10px);
-    /* Added backdrop blur effect for a frosted glass look */
+    border-radius: 8px;
+    /* Reduced border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Reduced shadow size */
+    backdrop-filter: blur(8px);
+    /* Adjusted blur effect */
 }
 
 .footer-section {
-    margin: 20px;
-    min-width: 250px;
-    /* Increased minimum width for better readability */
+    margin: 10px;
+    /* Reduced margin for mobile */
+    min-width: 200px;
+    /* Adjusted minimum width */
+    max-width: 100%;
+    /* Ensure sections don't exceed container width */
 }
 
 .footer-section h3 {
-    margin-bottom: 15px;
-    /* Increased margin for better spacing */
-    font-size: 2.2em;
-    /* Slightly smaller font size for consistency */
+    margin-bottom: 10px;
+    /* Reduced margin for better fit */
+    font-size: 1.8em;
+    /* Adjusted font size for consistency */
     color: #f5c508;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    /* Enhanced text shadow for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /* Reduced text shadow size */
 }
 
 .footer-section p {
-    margin: 8px 0;
-    /* Increased margin for readability */
-    font-size: 1.8em;
-    /* Slightly smaller font size for consistency */
+    margin: 6px 0;
+    /* Adjusted margin */
+    font-size: 1.4em;
+    /* Adjusted font size */
     color: #ffffff;
 }
 
@@ -62,14 +68,14 @@
     color: #f5c508;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
-    /* Added letter-spacing transition */
 }
 
 .footer-section a:hover {
     color: #ffeb3b;
-    transform: scale(1.2);
-    letter-spacing: 1px;
-    /* Added letter-spacing on hover for visual interest */
+    transform: scale(1.1);
+    /* Adjusted scale for better fit */
+    letter-spacing: 0.5px;
+    /* Adjusted letter-spacing */
 }
 
 @media (max-width: 768px) {
@@ -79,19 +85,20 @@
     }
 
     .footer-section {
-        margin: 15px 0;
+        margin: 10px 0;
+        /* Adjusted margin for better spacing */
         text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .footer-section h3 {
-        font-size: 1.8em;
-        /* Further adjusted font size for small screens */
+        font-size: 1.5em;
+        /* Further adjusted font size */
     }
 
     .footer-section p {
-        font-size: 1.6em;
-        /* Further adjusted font size for small screens */
+        font-size: 1.2em;
+        /* Further adjusted font size */
     }
 }
