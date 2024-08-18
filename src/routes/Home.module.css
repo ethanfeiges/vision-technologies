@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -15,21 +15,21 @@
     position: relative;
     background: linear-gradient(145deg, #035ebf, #0492ff);
     color: #0e0b0b;
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    max-width: 90%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
 }
 
 .headerBox {
-    z-index: 1
+    z-index: 1;
 }
-/* Add the stripe effect */
+
 .headerBox::before {
     content: '';
     position: absolute;
@@ -37,7 +37,7 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 10px;
+    height: 8px;
     background: linear-gradient(to right, #78aaff, #87cefa);
     transform: skewY(-1.5deg);
 }
@@ -53,19 +53,19 @@ h3 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #f0efe4;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     color: #080800;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #ffffff;
 }
@@ -73,26 +73,32 @@ h3 {
 /* Glossy card styles */
 .glossy-card {
     background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 15px 0;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%;
 }
 
 .glossy-card:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .homepage-header {
-        padding: 20px;
+    .homepage {
+        padding: 15px;
     }
 
-    .homepage-companies {
-        margin: 20px 0;
+    .homepageHeader {
+        padding: 20px;
+        margin: 0 auto 20px;
+    }
+
+    .headerBox::before {
+        height: 10px;
     }
 
     h1 {
@@ -104,6 +110,43 @@ h3 {
     }
 
     h3 {
+        font-size: 1rem;
+    }
+
+    .homepage-companies,
+    .glossy-card {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage {
+        padding: 10px;
+    }
+
+    .homepageHeader {
+        padding: 15px;
+        margin: 0 auto 15px;
+    }
+
+    .headerBox::before {
+        height: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
         font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 0.875rem;
+    }
+
+    .homepage-companies,
+    .glossy-card {
+        margin: 10px 0;
     }
 }
