@@ -38,7 +38,7 @@ const ContactUs = () => {
   return (
     <div className="page-container">
       <h1 className="page-title">Contact Us</h1>
-      <form ref={form} onSubmit={handleSubmit} className="form-container">
+      <form ref={form} onSubmit={sendEmail} className="form-container">
         <label>Name</label>
         <input type="text" name="user_name" />
         <label>Email</label>
