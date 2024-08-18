@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Make sure the root div takes up the full height */
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Ensure the App component also takes up the full height */
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Main content should take up the remaining space */
+main {
+  flex: 1;
+}

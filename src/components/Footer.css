@@ -1,0 +1,97 @@
+/* ./components/Footer.css */
+
+.footer {
+    background: linear-gradient(180deg, rgba(4, 109, 166, 1), rgba(0, 123, 255, 1));
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+    /* Increased padding for a more spacious look */
+    box-sizing: border-box;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Slightly larger shadow for depth */
+    border-top: 5px solid #f5c508;
+    /* Added a top border for visual separation */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    /* Slightly larger border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced box shadow */
+    backdrop-filter: blur(10px);
+    /* Added backdrop blur effect for a frosted glass look */
+}
+
+.footer-section {
+    margin: 20px;
+    min-width: 250px;
+    /* Increased minimum width for better readability */
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    /* Increased margin for better spacing */
+    font-size: 2.2em;
+    /* Slightly smaller font size for consistency */
+    color: #f5c508;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Enhanced text shadow for better contrast */
+}
+
+.footer-section p {
+    margin: 8px 0;
+    /* Increased margin for readability */
+    font-size: 1.8em;
+    /* Slightly smaller font size for consistency */
+    color: #ffffff;
+}
+
+.footer-section a {
+    color: #f5c508;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+    /* Added letter-spacing transition */
+}
+
+.footer-section a:hover {
+    color: #ffeb3b;
+    transform: scale(1.2);
+    letter-spacing: 1px;
+    /* Added letter-spacing on hover for visual interest */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 15px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h3 {
+        font-size: 1.8em;
+        /* Further adjusted font size for small screens */
+    }
+
+    .footer-section p {
+        font-size: 1.6em;
+        /* Further adjusted font size for small screens */
+    }
+}

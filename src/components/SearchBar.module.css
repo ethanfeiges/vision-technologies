@@ -1,0 +1,146 @@
+.searchBarContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputGroup {
+    width: 400px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dataTable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 98%;
+    background-color: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid #ddd;
+    backdrop-filter: blur(8px);
+    /* Adds a blur effect for a glossy look */
+    overflow: hidden;
+}
+
+.dataTable a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+.dataTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.dataTable td {
+    padding: 0.5rem;
+}
+
+.dataTable a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    /* Lighter background on hover */
+    color: #007bff;
+    /* Change text color on hover */
+}
+.dataTableHidden {
+    display: none;
+}
+
+.searchBarContainer:hover .dataTable,
+.dataTable:not(.dataTableHidden) {
+    display: table;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dataTable a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.dataTable tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.dataTable td {
+    padding: 0.5rem;
+}
+
+.dataTable a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .inputGroup {
+        width: 100%;
+    }
+
+    .dataTable {
+        width: 100%;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .inputGroup {
+        width: 100%;
+    }
+
+    .searchInput {
+        font-size: 1.1rem;
+        padding: 0.65rem 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inputGroup {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchInput {
+        font-size: 1rem;
+        padding: 0.6rem 0.85rem;
+    }
+
+    .dataTable {
+        width: 100%;
+        left: 0;
+        transform: translateY(5px);
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .dataTable a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

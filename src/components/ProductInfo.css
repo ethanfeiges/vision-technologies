@@ -1,0 +1,295 @@
+/* Product details container */
+.product-details {
+    background-color: #f5f5f5;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center horizontally */
+}
+
+.product-slide {
+    position: relative;
+    margin: 30px auto;
+    /* Horizontally centers the container */
+    padding: 2rem 3.5rem;
+    width: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, rgba(5, 10, 82, 0.849), rgba(60, 0, 255, 0.692));
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* Image gallery slide container */
+.image-gallery-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    /* Adjusted to fit parent width */
+    height: 500px;
+    /* Set height as needed */
+    background-color: white;
+    border: 1px solid #ddd;
+    /* Lighter border */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    /* Softer, larger shadow */
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    transition: box-shadow 0.3s ease;
+    /* Smooth shadow transition */
+}
+
+/* Image gallery slide images */
+.image-gallery-slide img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Match the container's rounded corners */
+}
+
+.links{
+    display: flex;
+    padding: 30px;
+}
+/* Navigation arrows */
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    /* Increased size for better usability */
+    height: 50px;
+    background: linear-gradient(135deg, rgba(11, 78, 235, 0.7), rgba(3, 207, 243, 0.5));
+    /* Gradient background */
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    /* Slight border for definition */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    /* Ensure buttons are above gallery */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow for depth */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* Specific positioning for navigation arrows */
+.image-gallery-left-nav {
+    left: -50px;
+    
+    /* Spacing from the left */
+}
+
+.image-gallery-right-nav {
+    right: -50px;
+    /* Spacing from the right */
+}
+
+/* Remove default arrow styles and add custom ones */
+.image-gallery-left-nav .image-gallery-icon,
+.image-gallery-right-nav .image-gallery-icon {
+    display: none;
+}
+
+.image-gallery-left-nav::before,
+.image-gallery-right-nav::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    /* Arrow style */
+    transform: rotate(45deg);
+    /* Rotate to form arrow */
+}
+
+.image-gallery-left-nav::before {
+    transform: rotate(135deg);
+    /* Point left */
+}
+
+.image-gallery-right-nav::before {
+    transform: rotate(-45deg);
+    /* Point right */
+}
+
+.image-gallery-left-nav:hover,
+.image-gallery-right-nav:hover {
+    background: linear-gradient(160deg, rgba(27, 10, 217, 0.8), rgba(0, 0, 0, 0.6));
+    /* Darker gradient on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Enhanced shadow on hover */
+}
+.product-header {
+    font-size: 1.7rem;
+    /* Larger font size for better readability and emphasis */
+    color: #f8f5f5;
+    /* Darker color for a professional and modern look */
+    padding: 20px;
+    /* Increased padding for a more substantial appearance */
+    margin-bottom: 20px;
+    /* Spacing below the description */
+    background: linear-gradient(90deg, rgba(63, 192, 235, 0.845), rgba(3, 22, 232, 0.952));
+    /* Horizontal poppy blue gradient for a glossy effect */
+    border-radius: 8px;
+    /* Rounded corners for a sleek, polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Softer shadow for a professional depth */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle text shadow for added glossiness */
+    margin-top: auto;
+    /* Push description to the bottom of the info section */
+    letter-spacing: 0.5px;
+    /* Slightly increased letter spacing for a refined appearance */
+    font-weight: 300;
+    /* Light font weight for an elegant and professional feel */
+    line-height: 1.6;
+    /* Improved line height for better readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth transitions for interactive effects */
+    display: flex;
+    /* Flexbox for centering content */
+    justify-content: center;
+    /* Center content horizontally */
+    text-align: center;
+    /* Center text alignment for consistency */
+    font-family: 'Roboto', sans-serif;
+    /* Professional and clean font for modern design */
+}
+.product-title {
+    font-size: 2.7rem;
+    /* Slightly larger for greater emphasis */
+    color: white;
+    /* Darker, modern color for better readability */
+    padding: 15px 20px;
+    /* Increased padding for a more substantial appearance */
+    margin-bottom: 20px;
+    /* More spacing below the title */
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.95), rgba(0, 153, 255, 1));
+    /* Subtle gradient for a sophisticated look */
+    border-radius: 8px;
+    /* More rounded corners for a modern feel */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for a deeper 3D effect */
+    letter-spacing: 1.2px;
+    /* Increased letter spacing for a cleaner look */
+    font-weight: 800;
+    /* Bolder font for stronger emphasis */
+    line-height: 1.5;
+    /* Increased line height for better readability */
+    text-transform: uppercase;
+    /* Uppercase text for a bold statement */
+    text-align: center;
+    /* Center text alignment */
+    font-family: 'Roboto', sans-serif;
+    /* Modern and clean font */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background 0.3s ease;
+    /* Smooth transitions */
+}
+
+.product-title:hover {
+    transform: translateY(-5px);
+    color: white;
+    /* More pronounced lift effect on hover */
+    background: linear-gradient(135deg, rgba(1, 58, 72, 0.95), rgba(0, 153, 255, 1));
+    /* Slightly more intense gradient on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
+    /* Darker text color on hover for better contrast */
+}
+/* Product features list */
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    font-family: 'Roboto', sans-serif;
+    /* Apply the new font */
+}
+
+.product-features li {
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    /* Glossy background */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Soft border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    padding: 0.75rem 1.5rem;
+    /* Padding for content */
+    margin-bottom: 0.5rem;
+    /* Space between items */
+    font-size: 1.5rem;
+    /* Font size */
+    color: #333;
+    /* Text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+}
+
+.product-features li:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
+}
+
+/* Product button styling */
+.product-button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    /* Blue gradient background */
+    color: #fff;
+    border: none;
+    padding: 18px;
+    margin: 30px;
+    /* Slightly increased padding for better touch targets */
+    border-radius: 8px;
+    /* More rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions for background and transform effects */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.6rem;
+    /* Adjusted font size for better readability */
+    font-weight: bold;
+    /* Bold font for emphasis */
+    text-transform: uppercase;
+    /* Uppercase text for a more defined look */
+    margin-top: 15px;
+    /* Increased margin to space out from the description */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Soft shadow for a floating effect */
+}
+
+.product-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a);
+    /* Darker gradient for hover effect */
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
+}
+
+.product-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    /* Focus ring for accessibility */
+}

@@ -1,0 +1,214 @@
+/* General Styles */
+.header {
+    background: linear-gradient(180deg, rgba(4, 109, 166, 1), rgba(0, 123, 255, 1));
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    position: relative;
+    transform: rotateX(1deg);
+}
+
+.header:hover {
+    background: linear-gradient(180deg, rgba(77, 168, 218, 0.8), rgba(0, 123, 255, 0.8));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transform: rotateX(0deg) translateY(-2px);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transform: translateX(1rem);
+}
+
+.logoImage {
+    height: clamp(25px, 4vw, 50px);
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logoImage:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.title {
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
+    text-align: center;
+    line-height: 1;
+    margin: 0 1rem;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    flex: 1;
+}
+
+.title:hover {
+    transform: scale(1.05);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear;
+}
+
+.nav {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: clamp(0.9rem, 1.5vw, 1.8rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navLink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.navLinkProducts {
+    position: relative;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    border-radius: 8px;
+}
+
+.navLinkProducts:hover .dropdownContent,
+.dropdownContent:hover {
+    display: grid;
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear;
+}
+
+.dropdownContent a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    padding: 10px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+
+.dropdownContent h1 {
+    color: black;
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdownContent a:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .header {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .nav {
+        font-size: 1.6rem;
+    }
+
+    .logoImage {
+        height: clamp(25px, 4vw, 40px);
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .dropdownContent {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        width: 100vw;
+        max-height: 70vh;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .nav {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        transform: translateX(1rem);
+    }
+
+    .logoImage {
+        height: clamp(20px, 4vw, 35px);
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .nav {
+        font-size: 1.4rem;
+    }
+
+    .logoImage {
+        height: clamp(15px, 4vw, 30px);
+    }
+
+    .navLink {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .dropdownContent {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
