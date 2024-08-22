@@ -17,6 +17,10 @@
     opacity: 0;
     transition: opacity 0.5s ease-out;
 }
+.slider-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
 
 .slide-wrapper {
     display: flex;
