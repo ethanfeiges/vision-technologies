@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './ImageSlider.css';
 
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -22,13 +22,23 @@ const ImageSlider = ({ slides }) => {
   const handleSlideClick = (link) => {
     setIsTransitioning(true);
     setTimeout(() => {
-      navigate(link); // Use navigate instead of history.push
+      navigate(link);
     }, 500); // Match this duration with the CSS transition
   };
 
+  // Reset transition state after navigation
+  React.useEffect(() => {
+    if (isTransitioning) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500); // Match this duration with the CSS transition
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitioning]);
+
   return (
     <div className={`slider-container ${isTransitioning ? 'transition-out' : ''}`}>
-      <div className="slide-wrapper" style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
+      <div className={`slide-wrapper ${isTransitioning ? 'transition-out' : 'transition-in'}`} style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
         {slides.map((slide, index) => (
           <div
             key={index}
