@@ -14,6 +14,10 @@ import Eidon from "./eidon/Eidon.jpg"
 import product4Img1 from "./eidon/img1.webp"
 import product4Img2 from "./eidon/img2.webp"
 import product4Img3 from "./eidon/img3.jpg"
+
+import product5Img1 from "./compass/img1.jpg"
+import product5Img2 from "./compass/img2.png"
+import product5Img3 from "./compass/img3.jpg"
 export const icareProducts = [
   {
     id: 1,
@@ -73,8 +77,8 @@ export const icareProducts = [
   },
   {
     id: 4,
-    name: "iCare EIDON",
-    title: "iCare EIDON",
+    name: "iCare® EIDON",
+    title: "iCare® EIDON",
     image: Eidon,
     images: {
       product4Img1,
@@ -89,6 +93,26 @@ export const icareProducts = [
     },
     description: "Experience the clarity and precision of wide-field retinal imaging with TrueColor technology.",
     link: "https://www.icare-world.com/us/product/icare-eidon/"
+  },
+  {
+  id: 5,
+  name: "iCare® Compass",
+  title: "iCare® Compass",
+  image: product5Img1,  // Placeholder for the image path
+  images: {
+    product5Img1,  // Placeholder for additional image paths
+    product5Img2,
+    product5Img3
+  },
+  features: {
+    feature1: "Advanced fundus perimeter with real-time retinal tracking for accurate visual field testing.",
+    feature2: "TrueColor confocal imaging for detailed and high-resolution retinal images.",
+    feature3: "Combines structural and functional analysis for comprehensive glaucoma management.",
+    feature4: "User-friendly interface with automated functions to enhance clinical workflow and efficiency."
+  },
+  description: "The iCare® Compass provides precise visual field testing with integrated TrueColor fundus imaging.",
+  link: "https://www.icare-world.com/us/product/icare-compass/"
 }
+
   // ... more products
 ];

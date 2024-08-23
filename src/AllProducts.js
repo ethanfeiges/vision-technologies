@@ -120,10 +120,12 @@ export const AllProducts = [
     route: './eyefficient/s390l-firefly-digital-slit-lamp-imaging-system'
   },
   {
-    id: 4,
-    name: "iCare EIDON",
+    name: "iCare® EIDON",
     route: "./icare/icare-eidon"
-    
+  },
+  {
+    name: "iCare® Compass",
+    route: "./icare/icare-compass"
   }
 ];
 export default AllProducts
