@@ -18,6 +18,10 @@ import product4Img3 from "./eidon/img3.jpg"
 import product5Img1 from "./compass/img1.jpg"
 import product5Img2 from "./compass/img2.png"
 import product5Img3 from "./compass/img3.jpg"
+
+import product6Img1 from "./DRSPlus/img1.jpg"
+import product6Img2 from "./DRSPlus/img2.jpg"
+import product6Img3 from "./DRSPlus/img3.jpg"
 export const icareProducts = [
   {
     id: 1,
@@ -112,7 +116,27 @@ export const icareProducts = [
   },
   description: "The iCare® Compass provides precise visual field testing with integrated TrueColor fundus imaging.",
   link: "https://www.icare-world.com/us/product/icare-compass/"
+  },
+  {
+  id: 6,
+  name: "iCare® DRSplus",
+  title: "iCare® DRSplus",
+  image: product6Img1,  // Placeholder for the main image variable
+  images: {
+    product6Img1,  // Placeholder for additional image variables
+    product6Img2,
+    product6Img3
+  },
+  features: {
+    feature1: "Confocal fundus imaging with TrueColor technology for high-definition retinal images.",
+    feature2: "Non-mydriatic imaging capability ensures patient comfort and streamlined workflows.",
+    feature3: "Automated image capture and processing for consistent and reliable results.",
+    feature4: "Compact design with user-friendly interface, ideal for various clinical environments."
+  },
+  description: "The iCare® DRSplus offers high-definition retinal imaging with advanced TrueColor confocal technology.",
+  link: "https://www.icare-world.com/us/product/icare-drsplus/"
 }
+  
 
   // ... more products
 ];
