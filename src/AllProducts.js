@@ -126,6 +126,10 @@ export const AllProducts = [
   {
     name: "iCare® Compass",
     route: "./icare/icare-compass"
+  },
+  {
+    name: "name: 'S360 Slit Lamp",
+    route: "./eyefficient/s360-slit-lamp"
   }
 ];
 export default AllProducts
