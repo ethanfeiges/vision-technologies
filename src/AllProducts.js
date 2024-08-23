@@ -32,18 +32,6 @@ export const AllProducts = [
         route: "./virtual-vision/virtual-eye-vrvf"
     },
     {
-        name: 'Exam Lane Value Package',
-        route: './s4optik/exam-lane-value-package'
-    },
-    {
-        name: 'Exam Lane Premium Package',
-        route: './s4optik/exam-lane-premium-package'
-    },
-    {
-        name: 'Exam Lane Combo Package',
-        route: './s4optik/exam-lane-combo-package'
-    },
-    {
         name: 'Retinomax K+ Screen',
         route: './s4optik/retinomax-k-screen'
     },
@@ -130,6 +118,29 @@ export const AllProducts = [
   {
     name: "name: 'S360 Slit Lamp",
     route: "./eyefficient/s360-slit-lamp"
+  },
+  {
+    name: "2000 CH Examination Chair",
+    route: "./s4optik/2000-ch-examination-chair"
+  },
+  {
+    name: "2500 CH Examination Chair",
+    route: "./s4optik/2500-ch-examination-chair"
+  }, {
+    name: "2000-ST Instrument Stand",
+    route: "./s4optik/2000-st-instrument-stand"
+  },
+  {
+    name: "2000 Combo Chair and Stand",
+    route: "./s4optik/2000-combo-chair-and-stand"
+  },
+  {
+    name: "SL-Z3 Slit Lamp",
+    route: "./s4optik/sl-z3-slit-lamp"
+  },
+  {
+    name: 'SL-H5 Slit Lamp',
+    route: "./s4optik/sl-h5-slit-lamp"
   }
 ];
 export default AllProducts
