@@ -50,7 +50,7 @@ const Header = ({ title, links }) => {
                   >
                     {/* Dropdown options */}
                     <a href="/reichert">Reichert</a>
-                    <a href="/haag-streit">Haag-Streit</a>
+                    <a href="/haag-streit">Haag-Streit/Reliance</a>
                     <a href="/icare">iCare</a>
                     <a href="/s4optik">S4optik</a>
                     <a href="/huvitz">Huvitz</a>

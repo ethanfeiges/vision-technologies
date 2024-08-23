@@ -6,7 +6,7 @@ import ProductInfo from "../../components/ProductInfo.js";
 
 const Zeiss = {
   name: "zeiss",
-  info: "Elevate your practice with Zeiss. Discover cutting-edge ophthalmic solutions that redefine precision, efficiency, and patient care. See beyond limitations, diagnose with confidence, and deliver extraordinary visual outcomes.",
+  info: "(Pre-owned products) Elevate your practice with Zeiss. Discover cutting-edge ophthalmic solutions that redefine precision, efficiency, and patient care. See beyond limitations, diagnose with confidence, and deliver extraordinary visual outcomes.",
   img: img
 };
 

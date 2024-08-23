@@ -6,7 +6,7 @@ import ProductInfo from '../../components/ProductInfo';
 
 const marco = {
   name: "marco", // Add name property for routing
-  info: "Precision ophthalmic equipment for comprehensive eye care. Experience advanced technology, reliable performance, and exceptional patient outcomes.",
+  info: "(Pre-owned products). Precision ophthalmic equipment for comprehensive eye care. Experience advanced technology, reliable performance, and exceptional patient outcomes.",
   img: img,
 };
 
