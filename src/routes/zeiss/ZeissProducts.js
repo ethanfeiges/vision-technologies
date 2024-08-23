@@ -30,6 +30,10 @@ import product7Img3 from "./HFA/img3.jpg";
 import product7Img1 from "./HFA/img1.jpg";
 import product7Img2 from "./HFA/img2.png";
 
+import HFA840 from "./840/840.webp"
+import product8Img1 from "./840/img1.webp";
+import product8Img2 from "./840/img2.jpg";
+
 
 export const ZeissProducts = [{
   id: 1,
@@ -163,6 +167,25 @@ export const ZeissProducts = [{
   },
   image: product7, 
   description: "Identify subtle visual field changes early, preventing irreversible vision loss. Optimize your glaucoma management workflow with reliable, efficient testing."
-},
+  },
+  {
+  id: 3,
+  name: 'HFA 840',
+  title: "Humphrey® Field Analyzer 3 Model 840",
+  features: {
+    feature1: "Advanced perimetry with SITA Faster for quick and accurate visual field testing.",
+    feature2: "Offers real-time gaze tracking and head tracking for improved test accuracy.",
+    feature3: "Incorporates Guided Progression Analysis (GPA) for detecting and monitoring glaucoma progression.",
+    feature4: "Intuitive interface with streamlined workflow to enhance clinical efficiency."
+  },
+  images: {
+    product8Img1,  // Placeholder for additional image variables
+    product8Img2,
+    
+  },
+  image: HFA840,  // Placeholder for the main image variable
+  description: "Experience cutting-edge visual field testing, and Eehance diagnostic accuracy and patient management with comprehensive analysis tools.",
+  link: "https://www.zeiss.com/meditec/en/products/perimetry/humphrey-field-analyzer-3.html"
+}
   // ... more products
 ];

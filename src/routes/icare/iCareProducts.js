@@ -15,10 +15,13 @@ import product4Img1 from "./eidon/img1.webp"
 import product4Img2 from "./eidon/img2.webp"
 import product4Img3 from "./eidon/img3.jpg"
 
+import compass from "./compass/Compass.jpg"
 import product5Img1 from "./compass/img1.jpg"
 import product5Img2 from "./compass/img2.png"
 import product5Img3 from "./compass/img3.jpg"
 
+
+import DRSPlus from "./DRSPlus/DRSPlus.jpg"
 import product6Img1 from "./DRSPlus/img1.jpg"
 import product6Img2 from "./DRSPlus/img2.jpg"
 import product6Img3 from "./DRSPlus/img3.jpg"
@@ -102,7 +105,7 @@ export const icareProducts = [
   id: 5,
   name: "iCare® Compass",
   title: "iCare® Compass",
-  image: product5Img1,  // Placeholder for the image path
+  image: compass,  // Placeholder for the image path
   images: {
     product5Img1,  // Placeholder for additional image paths
     product5Img2,
@@ -121,7 +124,7 @@ export const icareProducts = [
   id: 6,
   name: "iCare® DRSplus",
   title: "iCare® DRSplus",
-  image: product6Img1,  // Placeholder for the main image variable
+  image: DRSPlus,  // Placeholder for the main image variable
   images: {
     product6Img1,  // Placeholder for additional image variables
     product6Img2,

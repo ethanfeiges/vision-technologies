@@ -3,6 +3,7 @@ import product1Img1 from "./firefly/img1.jpg";
 import product1Img2 from "./firefly/img2.png";
 import product1Img3 from "./firefly/img3.jpg";
 
+import product2 from "./S360/S360.png";
 import product2Img1 from "./S360/img1.png";
 import product2Img2 from "./S360/img2.jpg";
 export const EyefficientProducts = [
@@ -39,7 +40,7 @@ export const EyefficientProducts = [
     product2Img1,  // Placeholder for additional image variables
     product2Img2,
   },
-  image: product2Img1,  // Placeholder for the main image variable
+  image: product2,  // Placeholder for the main image variable
   description: "Experience the precision and durability of the S360 Slit Lamp, designed for detailed anterior segment examination.",
   link: "https://www.eyefficient.com/slit-lamps/converging-optics"
 }
