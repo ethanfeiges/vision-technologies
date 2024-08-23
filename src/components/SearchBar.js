@@ -13,6 +13,9 @@ const SearchBar = () => {
   const containerRef = useRef(null);
 
   const handleSubmit = (e) => {
+    if (search === "") {
+      return
+    }
     e.preventDefault();
     const filteredData = data.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
     if (filteredData.length > 0) {

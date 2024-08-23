@@ -65,8 +65,8 @@
 .next {
     position: absolute;
     top: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0.7);
     border: none;
     border-radius: 50%;
