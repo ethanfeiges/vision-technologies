@@ -109,11 +109,11 @@ export const AllProducts = [
   },
   {
     name: "iCare® EIDON",
-    route: "./icare/icare-eidon"
+    route: "./icare/icare®-eidon"
   },
   {
     name: "iCare® Compass",
-    route: "./icare/icare-compass"
+    route: "./icare/icare®-compass"
   },
   {
     name: "name: 'S360 Slit Lamp",
