@@ -16,7 +16,8 @@ import { ICarePage } from "./routes/icare/iCare.js";
 import { HuvitzPage } from './routes/huvitz/huvitz.js';
 import { HaagPage } from './routes/haag-streit/HS.js';
 import { EyefficientPage } from './routes/eyefficient/eyefficient.js';
-import SearchBar from './components/SearchBar.js';
+import { ESwinPage } from "./routes/e-swin/e-swin.js";
+
 
 function App() {
   const links = [
@@ -52,6 +53,8 @@ function App() {
           <Route path="/zeiss/*" element={<ZeissPage />} />
           <Route path="/marco" element={<Products n={10} />} />
           <Route path="/marco/*" element={<MarcoPage />} />
+          <Route path="/e-swin" element={<Products n={11} />} />
+          <Route path="/e-swin/*" element={<ESwinPage />} />
           {/* Add more routes as needed */}
         </Routes>
         <Footer />

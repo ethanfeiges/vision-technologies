@@ -15,7 +15,7 @@ import eyefficient from '../routes/eyefficient/eyefficient.png';
 import marco from "../routes/marco/Marco.png";
 import zeiss from "../routes/zeiss/Zeiss.png";
 import styles from './Home.module.css'; // Ensure to import the CSS file
-
+import eSwin from '../routes/e-swin/logo.png';
 const slides = [
   { image: image1, text: 'iCare Eidon', link: "./icare/icare-eidon"},
   {
@@ -33,6 +33,7 @@ const companies = [
   { image: huvitz, link: "/huvitz" },
   { image: virtualvision, link: "/virtual-vision" },
   { image: eyefficient, link: "/eyefficient" },
+  {image: eSwin, link: "/e-swin"}
 ];
 
 const usedCompanies = [

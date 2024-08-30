@@ -18,6 +18,8 @@ import { huvitz, HuvitzProducts } from "./huvitz/huvitz.js";
 import { Haag } from "./haag-streit/HS.js";
 import { HaagProducts } from "./haag-streit/HaagProducts.js";
 import { EyefficientProducts, Eyefficient } from './eyefficient/eyefficient.js';
+
+import {ESwin, ESwinProducts} from "./e-swin/e-swin.js"
 console.log(ZeissProducts)
 const Products = ({ n }) => {
   if (n === 1) {
@@ -78,6 +80,13 @@ const Products = ({ n }) => {
     return (
       <div className="App">
         <ProductList products={marcoProducts} company={marco} />
+      </div>
+    );
+  }
+  if(n === 11) {
+    return (
+      <div className="App">
+        <ProductList products={ESwinProducts} company={ESwin} />
       </div>
     );
   }

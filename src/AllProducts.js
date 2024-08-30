@@ -141,7 +141,16 @@ export const AllProducts = [
   {
     name: 'SL-H5 Slit Lamp',
     route: "./s4optik/sl-h5-slit-lamp"
-  }
+  },
+  {
+    name: "Tearcheck®",
+    route: "./E-Swin/tearcheck®"
+  },
+  {
+    name: "E-Eye",
+    route: "./E-Swin/e-eye"
+  },
+
 ];
 export default AllProducts
 
