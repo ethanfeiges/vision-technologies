@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project is the source code for the Vision Technologies website:
+https://visiontech-nw.com/
 ## Available Scripts
 
 In the project directory, you can run:
