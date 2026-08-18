@@ -9,16 +9,6 @@ const s4optik = {
   img: img,
 };
 
-function ProductDetails({ product }) {
-  return (
-    <div>
-      <h2>{product.name}</h2>
-      <img src={product.image} alt={product.name} />
-      <p>{product.description}</p>
-    </div>
-  );
-}
-
 function S4optikPage() { // Function name changed for consistency
   return (
     <Routes>

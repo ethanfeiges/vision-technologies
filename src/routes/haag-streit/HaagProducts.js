@@ -17,7 +17,6 @@ import product4Img3 from "./BI900/img3.png";
 import product5 from "./7900IS/7900IS.png";
 import product5Img1 from "./7900IS/img1.jpg";
 import product5Img2 from "./7900IS/img2.jpg";
-import product5Img3 from "./7900IS/img3.jpg";
 import product6 from "./FX920/Fx-920.jpg";
 import product6Img1 from "./FX920/img1.png";
 import product6Img2 from "./FX920/img2.jpg";
