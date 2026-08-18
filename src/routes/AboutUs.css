@@ -1,104 +1,84 @@
 .aboutUsContainer {
-    display: flex;
-    flex-direction: row;
-    /* Arrange elements horizontally by default */
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
     align-items: center;
-    justify-content: space-between;
-    padding: 50px 20px;
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    gap: clamp(2rem, 7vw, 7rem);
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 6rem) 0;
+    color: #17324d;
 }
 
-.textContainer,
-.photoContainer {
-    width: 45%;
-    /* Default width for larger screens */
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.textContainer {
+    max-width: 620px;
 }
-.photoContainer h1{
-    font-size: 3rem;
-        /* Adjust size as needed */
-        font-weight: bold;
-        color: #000;
-        /* Base color */
-        background: linear-gradient(135deg, #333 0%, #000 100%);
-        /* Gradient background for more depth */
-        -webkit-background-clip: text;
-        /* Clipping to apply gradient to text */
-        -webkit-text-fill-color: transparent;
-        /* Make text color transparent to show gradient */
-        text-shadow:
-            2px 2px 4px rgba(0, 0, 0, 0.5),
-            /* Subtle shadow for depth */
-            0 0 10px rgba(255, 255, 255, 0.8);
-        /* Glow effect to make it pop */
-        margin: 0;
-        padding: 0;
+
+.aboutEyebrow,
+.photoEyebrow {
+    margin: 0 0 1rem;
+    color: #176d70;
+    font: 700 0.82rem/1.2 Arial, Helvetica, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.textContainer h1 {
+    margin: 0 0 1.75rem;
+    color: #17324d;
+    font: 700 clamp(2.2rem, 5vw, 4rem)/1.08 Arial, Helvetica, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.textContainer p:not(.aboutEyebrow) {
+    margin: 0 0 1.25rem;
+    color: #486173;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+.photoContainer {
+    padding: 1.25rem;
+    background: #fff;
+    border: 1px solid #d7e3e7;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(18, 52, 82, 0.12);
 }
 
 .photoContainer img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    max-height: 470px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
 }
 
-.photoContainer img:hover {
-    transform: scale(1.03);
+.photoContainer h2 {
+    margin: 1.25rem 0 0.25rem;
+    color: #17324d;
+    font: 700 1.5rem/1.25 Arial, Helvetica, sans-serif;
 }
 
-.textContainer h2 {
-    font-size: 3rem;
-    /* Default font size for larger screens */
-    font-family: 'Arial', sans-serif;
-    color: #0b04e4;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(11, 157, 255, 0.844);
-    transition: color 0.3s ease-in-out;
+.photoContainer > p:last-child {
+    margin: 0;
+    color: #6a7f8d;
+    font: 1rem/1.5 Arial, Helvetica, sans-serif;
 }
 
-.textContainer h2:hover {
-    color: #127dce;
-}
-
-.textContainer p {
-    font-size: 1.4rem;
-    /* Default font size for larger screens */
-    line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
-}
-
-@media (max-width: 767px) {
+@media (max-width: 760px) {
     .aboutUsContainer {
-        flex-direction: column;
-        /* Stack elements vertically on small screens */
-        align-items: center;
-        padding: 20px;
+        grid-template-columns: 1fr;
+        width: min(100% - 1rem, 1100px);
+        gap: 2rem;
+        padding: 2.5rem 0 3.5rem;
     }
 
-    .textContainer,
-    .photoContainer {
-        width: 100%;
-        /* Full width on small screens */
-        padding: 10px;
-        margin-bottom: 20px;
-        /* Space between stacked elements */
+    .textContainer h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
     }
 
-    .textContainer h2 {
-        font-size: 2rem;
-        /* Adjusted font size for smaller screens */
-        margin-bottom: 10px;
-    }
-
-    .textContainer p {
-        font-size: 1.2rem;
-        /* Adjusted font size for smaller screens */
+    .textContainer p:not(.aboutEyebrow) {
+        font-size: 1.08rem;
     }
 }

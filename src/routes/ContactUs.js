@@ -52,18 +52,34 @@ const ContactUs = () => {
 
   return (
     <div className="page-container">
-      <h1 className="page-title">Contact Us</h1>
-      <form ref={form} onSubmit={handleSubmit} className="form-container">
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Phone</label>
-        <input type="text" name="user_phone" onChange={handlePhoneChange} maxLength="12" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
+      <div className="contact-layout">
+        <section className="contact-intro">
+          <p className="eyebrow">Vision Technologies NW</p>
+          <h1 className="page-title">Let&apos;s talk about your practice.</h1>
+          <p className="intro-copy">
+            Tell us what equipment you are looking for, and our team will help you find the right fit.
+          </p>
+          <div className="contact-details">
+            <a href="mailto:ophthalmicservs@hotmail.com">ophthalmicservs@hotmail.com</a>
+            <a href="tel:4255039359">(425) 503-9359</a>
+          </div>
+        </section>
+        <form ref={form} onSubmit={handleSubmit} className="form-container">
+          <div className="form-heading">
+            <h2>Send us a message</h2>
+            <p>We&apos;ll get back to you as soon as possible.</p>
+          </div>
+          <label htmlFor="user-name">Name</label>
+          <input id="user-name" type="text" name="user_name" autoComplete="name" required />
+          <label htmlFor="user-email">Email</label>
+          <input id="user-email" type="email" name="user_email" autoComplete="email" required />
+          <label htmlFor="user-phone">Phone</label>
+          <input id="user-phone" type="tel" name="user_phone" onChange={handlePhoneChange} maxLength="12" autoComplete="tel" />
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" required />
+          <button type="submit">Send message</button>
+        </form>
+      </div>
       <div className={`popup ${popupVisible ? 'show' : ''}`}>
         Email sent successfully!
       </div>

@@ -18,7 +18,7 @@ function HuvitzPage() { // Function name changed for consistency
       {HuvitzProducts.map((product) => (
         <Route
           key={product.id}
-          path={`${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+          path={product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}
           element={<ProductInfo product={product} />}
         />
       ))}

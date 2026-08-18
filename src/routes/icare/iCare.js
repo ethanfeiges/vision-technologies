@@ -3,6 +3,7 @@ import React from 'react';
 import img from "./icare.jpg"; // Assuming the image is for iCare
 import { icareProducts } from './iCareProducts'; // Assuming a file for iCare products
 import ProductInfo from '../../components/ProductInfo';
+import productSlug from '../../utils/productSlug';
 
 const icare = {
   name: "icare", // Add name property for routing
@@ -17,7 +18,7 @@ function ICarePage() { // Function name changed for consistency
       {icareProducts.map((product) => (
         <Route
           key={product.id}
-          path={`${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+          path={productSlug(product.name)}
           element={<ProductInfo product={product} />}
         />
       ))}

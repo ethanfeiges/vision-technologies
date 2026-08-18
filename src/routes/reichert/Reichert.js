@@ -15,7 +15,7 @@ function ReichertPage() { // Function name changed for consistency
       {reichertProducts.map((product) => (
         <Route
           key={product.id}
-          path={`${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+          path={product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}
           element={<ProductInfo product={product} />}
         />
       ))}

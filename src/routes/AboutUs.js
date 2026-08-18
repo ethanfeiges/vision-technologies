@@ -6,7 +6,8 @@ const AboutUs = () => {
   return (
     <div className="aboutUsContainer">
       <div className="textContainer">
-        <h2>About Us</h2>
+        <p className="aboutEyebrow">About Vision Technologies</p>
+        <h1>Trusted ophthalmic care since 1993.</h1>
         <p>
           Vision Technologies, Inc. is a leading supplier of ophthalmic equipment and services in the Pacific Northwest. Since 1993, we've delivered cutting-edge solutions with a commitment to personalized service.
         </p>
@@ -18,9 +19,10 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="photoContainer">
-        <h1>President and CEO</h1>
+        <p className="photoEyebrow">Leadership</p>
         <img src={Bill} alt="Founder" />
         <h2>Bill Benedict</h2>
+        <p>President and CEO</p>
       </div>
     </div>
   );

@@ -50,8 +50,8 @@ const ImageSlider = ({ slides }) => {
           </div>
         ))}
       </div>
-      <button className="prev" onClick={goToPrevious}>&#10094;</button>
-      <button className="next" onClick={goToNext}>&#10095;</button>
+      <button type="button" className="prev" onClick={goToPrevious} aria-label="Previous product">&#10094;</button>
+      <button type="button" className="next" onClick={goToNext} aria-label="Next product">&#10095;</button>
       <div className="dots">
         {slides.map((_, index) => (
           <span

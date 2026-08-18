@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './ProductList.css';
 import { useEffect } from 'react';
+import productSlug from '../utils/productSlug';
 const ProductCard = ({ product, company }) => {
-  const formattedName = product.name.toLowerCase().replace(/\s+/g, '-'); // Format product name
+  const formattedName = productSlug(product.name);
 
   return (
     <div className="product-card">

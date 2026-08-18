@@ -1,146 +1,109 @@
 .searchBarContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     position: relative;
+    display: flex;
+    flex: 1 1 240px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
 }
 
 .inputGroup {
-    width: 400px;
-    margin-right: 10px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .searchInput {
     width: 100%;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.75rem 0.9rem;
+    color: #17324d;
+    background: #fff;
+    border: 2px solid #c6d5dc;
+    border-radius: 8px;
+    font: 1rem/1.3 Arial, Helvetica, sans-serif;
+}
+
+.searchInput:focus {
+    outline: 3px solid rgba(67, 168, 164, 0.35);
+    border-color: #2c8f91;
 }
 
 .dataTable {
-    display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 0.65rem);
     left: 0;
-    width: 98%;
-    background-color: #fff;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     z-index: 100;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    border: 1px solid #ddd;
-    backdrop-filter: blur(8px);
-    /* Adds a blur effect for a glossy look */
-    overflow: hidden;
-}
-
-.dataTable a {
-    text-decoration: none;
-    color: #000;
-    display: block;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 4px;
-}
-
-.dataTable tr {
-    border-bottom: 1px solid #ddd;
-}
-
-.dataTable td {
-    padding: 0.5rem;
-}
-
-.dataTable a:hover {
-    background-color: rgba(0, 123, 255, 0.1);
-    /* Lighter background on hover */
-    color: #007bff;
-    /* Change text color on hover */
-}
-.dataTableHidden {
     display: none;
+    width: 100%;
+    max-height: min(55vh, 360px);
+    margin: 0;
+    padding: 0.45rem;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #d7e3e7;
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(18, 52, 82, 0.2);
+    opacity: 0;
+    transform: translateY(-0.35rem);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.searchBarContainer:hover .dataTable,
 .dataTable:not(.dataTableHidden) {
-    display: table;
+    display: block;
     opacity: 1;
     transform: translateY(0);
 }
 
-.dataTable a {
-    text-decoration: none;
-    color: #000;
+.dataTable tbody,
+.dataTable tr,
+.dataTable td {
     display: block;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .dataTable tr {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #edf2f4;
+}
+
+.dataTable tr:last-child {
+    border-bottom: 0;
 }
 
 .dataTable td {
-    padding: 0.5rem;
+    padding: 0;
 }
 
-.dataTable a:hover {
-    background-color: #f1f1f1;
+.dataTable a {
+    display: block;
+    padding: 0.65rem 0.75rem;
+    color: #294d68;
+    border-radius: 8px;
+    font: 600 0.98rem/1.3 Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .inputGroup {
-        width: 100%;
-    }
-
-    .dataTable {
-        width: 100%;
-    }
+.dataTable a:hover,
+.dataTable a:focus {
+    color: #176d70;
+    background: #e8f3f3;
+    outline: none;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .inputGroup {
-        width: 100%;
-    }
-
     .searchInput {
-        font-size: 1.1rem;
-        padding: 0.65rem 0.9rem;
+        font-size: 1.05rem;
     }
 }
 
 @media (max-width: 480px) {
-    .inputGroup {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .searchInput {
-        font-size: 1rem;
-        padding: 0.6rem 0.85rem;
+    .searchBarContainer {
+        flex-basis: 100%;
+        max-width: none;
     }
 
     .dataTable {
         width: 100%;
-        left: 0;
-        transform: translateY(5px);
-        padding: 8px;
-        border-radius: 10px;
-    }
-
-    .dataTable a {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.9rem;
+        max-height: 45vh;
     }
 }

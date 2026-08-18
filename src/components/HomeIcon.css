@@ -1,24 +1,21 @@
 .home-icon {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: #176d70;
     color: white;
     border: none;
-    border-radius: 30%;
-    width: 80px;
-    /* Increase the width */
-    height: 80px;
+    border-radius: 10px;
+    width: 46px;
+    height: 46px;
     padding: 10px;
-    /* Increase the height */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.3s ease;
-    font-size: 2rem;
-    /* Increase the font size */
+    font-size: 1.15rem;
 }
 
 .home-icon:hover {
-    background: linear-gradient(135deg, #0056b3, #003d7a);
-    transform: scale(1.1);
+    background: #123452;
+    transform: translateY(-2px);
 }
